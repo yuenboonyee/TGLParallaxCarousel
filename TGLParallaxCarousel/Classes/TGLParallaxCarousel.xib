@@ -23,24 +23,22 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wDR-H9-kzL" userLabel="Main View">
                     <rect key="frame" x="0.0" y="0.0" width="370" height="166"/>
-                    <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                 </view>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQ2-yv-yGp" userLabel="PageControlContainer">
                     <rect key="frame" x="0.0" y="166" width="370" height="34"/>
                     <subviews>
                         <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="o8V-Vm-3ev">
-                            <rect key="frame" x="166" y="-1" width="39" height="37"/>
+                            <rect key="frame" x="166" y="-1.5" width="39" height="37"/>
                             <color key="pageIndicatorTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <color key="currentPageIndicatorTintColor" red="0.92549019607843142" green="0.69019607843137254" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </pageControl>
                     </subviews>
-                    <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.20000000000000001" alpha="0.28387200342465752" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.20000000000000001" alpha="0.0" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="o8V-Vm-3ev" firstAttribute="centerX" secondItem="NQ2-yv-yGp" secondAttribute="centerX" id="3g1-yO-fpI"/>
                         <constraint firstItem="o8V-Vm-3ev" firstAttribute="centerY" secondItem="NQ2-yv-yGp" secondAttribute="centerY" id="LcA-dT-IV6"/>
-                        <constraint firstItem="o8V-Vm-3ev" firstAttribute="top" secondItem="NQ2-yv-yGp" secondAttribute="top" constant="-1" id="Zuu-vR-17Q"/>
                         <constraint firstAttribute="height" constant="34" id="pLQ-bq-0KD"/>
-                        <constraint firstAttribute="bottom" secondItem="o8V-Vm-3ev" secondAttribute="bottom" constant="-2" id="slY-KC-AMJ"/>
                     </constraints>
                 </view>
             </subviews>
