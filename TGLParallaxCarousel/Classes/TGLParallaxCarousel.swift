@@ -40,6 +40,9 @@ open class TGLParallaxCarousel: UIView {
     @IBOutlet fileprivate weak  var mainView: UIView!
     @IBOutlet fileprivate weak  var pageControl: UIPageControl!
     
+    @IBOutlet weak var pageControlHeightConstraint: NSLayoutConstraint!
+    var originalPageControlHeightConstraintValue: CGFloat = 0
+    
     // MARK: - properties
     open weak var delegate: TGLParallaxCarouselDelegate? {
         didSet {
@@ -421,6 +424,11 @@ open class TGLParallaxCarousel: UIView {
     
     //Add method to hide page control
     open func setPageControlHidden(hide: Bool){
-        self.pageControl.isHidden = hide
+        if originalPageControlHeightConstraintValue == 0 {
+           originalPageControlHeightConstraintValue = pageControlHeightConstraint.constant
+        }
+        pageControlHeightConstraint.constant = hide ? 0 : originalPageControlHeightConstraintValue
+        self.layoutIfNeeded()
+        reloadData()
     }
 }
