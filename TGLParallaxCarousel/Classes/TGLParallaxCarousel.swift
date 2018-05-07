@@ -184,8 +184,8 @@ open class TGLParallaxCarousel: UIView {
     }
     
     func addItem(_ item: TGLParallaxCarouselItem) {
-        if itemWidth == nil { itemWidth = item.frame.width }
-        if itemHeight == nil { itemHeight = item.frame.height }
+        itemWidth = item.frame.width
+        itemHeight = item.frame.height
         
         item.center = mainView.center
         
