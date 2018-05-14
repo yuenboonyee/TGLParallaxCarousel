@@ -408,6 +408,12 @@ open class TGLParallaxCarousel: UIView {
         let endOffsetItems = offsetItems + distance
         
         selectedIndex = -Int(round(endOffsetItems / xDisplacement))
+
+        // Notify the delegate that the item is about to be shown.
+        if let selectedItem = self.delegate?.carouselView(self, itemForRowAtIndex: selectedIndex) {
+            self.delegate?.carouselView(self, willDisplayItem: selectedItem, forIndex: selectedIndex)
+        }
+
         isDecelerating = false
     }
     
